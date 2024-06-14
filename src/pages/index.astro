@@ -1,17 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import NavigationBar from "../components/NavigationBar.astro";
+import Footerdiv from "../components/Footer.astro";
+
 ---
 
 <Layout title="欢迎来到Astro">
 	<main>
-		<a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Blog</a>
-        <a href="/notes/">Notes</a>
 		
+	<NavigationBar />
 		<h1>欢迎来到 <span class="text-gradient">Astro</span></h1>
-		<h2>P211012582<span class="text-gradient">马丽</span></h2>
+		
+		<h2>P211012582 <a href="Http://www.baidu.com">马丽</a></h2>
 		<p class="instructions">
 			To get started, open the directory <code>src/pages</code> in your project.<br
 			/>
@@ -41,6 +42,7 @@ import Card from "../components/Card.astro";
 			/>
 		</ul>
 	</main>
+	<Footerdiv />
 </Layout>
 
 <style>

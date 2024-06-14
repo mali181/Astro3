@@ -1,15 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import NavigationBar from "../components/NavigationBar.astro";
+import Footerdiv from "../components/Footer.astro";
 ---
 
 <Layout title="欢迎来到Astro">
     <main>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Blog</a>
-        <a href="/notes/">Notes</a>
-
+        
+<NavigationBar />
         <h1>课堂笔记</h1>
         <h2>P211012582<span class="text-gradient">马丽</span></h2>
         <h2>Astro的安装及部署</h2>
@@ -19,6 +18,7 @@ import Card from "../components/Card.astro";
             <li><a href="/md/2/">在Astro中创建页面及导航链接</a></li>
         </ul>
     </main>
+    <Footerdiv />
 </Layout>
 
 <style>
