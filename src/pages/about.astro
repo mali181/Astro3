@@ -5,90 +5,82 @@ import NavigationBar from "../components/NavigationBar.astro";
 import Footerdiv from "../components/Footer.astro";
 ---
 
-<Layout title="欢迎来到Astro.">
-    <main>
-        
- <NavigationBar />
-        <h1>关于我</h1>
-        <p>在这个页面，我将展示有关我的整理的考研资料</p>
-       
-    </main>
-    <Footerdiv />
-</Layout>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎来到Astro</title>
+    <style>
+        /* 页面基础样式 */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #FFC0CB, white); /* 粉色到白色的渐变 */
+        }
 
-<style>
-    main {
-        margin: auto;
-        padding: 1rem;
-        width: 800px;
-        max-width: calc(100% - 2rem);
-        color: pink;
-        font-size: 20px;
-        line-height: 1.6;
-    }
+        /* 主要内容区域样式 */
+        main {
+            margin: auto;
+            padding: 1rem;
+            width: 800px;
+            max-width: calc(100% - 2rem);
+            color: pink;
+            font-size: 20px;
+            line-height: 1.6;
+        }
 
-    nav a {
-        color: purple;
-    }
+        /* 导航链接样式 */
+        nav a {
+            color: purple;
+        }
 
-    .astro-a {
-        position: absolute;
-        top: -32px;
-        left: 50%;
-        transform: translatex(-50%);
-        width: 220px;
-        height: auto;
-        z-index: -1;
-    }
+        /* 标题样式 */
+        h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 1em;
+        }
 
-    h1 {
-        font-size: 4rem;
-        font-weight: 700;
-        line-height: 1;
-        text-align: center;
-        margin-bottom: 1em;
-    }
+        /* 渐变文本样式 */
+        .text-gradient {
+            background-image: linear-gradient(to right, #FFC0CB, white);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent; /* Fallback for older browsers */
+        }
 
-    h2 {
-        text-align: center;
-    }
+        /* 指令样式 */
+        .instructions {
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 192, 206, 0.25);
+            background: linear-gradient(
+                rgba(255, 135, 135, 0.66),
+                rgba(255, 135, 135, 0.33)
+            );
+            padding: 1.5rem;
+            border-radius: 8px;
+            color: #FFC0CB; /* 确保文字颜色与背景协调 */
+        }
 
-    h3.text-gradient {
-        background-image: var(--accent-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 400%;
-        background-position: 0%;
-    }
-
-    .instructions {
-        margin-bottom: 2rem;
-        border: 1px solid rgba(var(--accent-light), 25%);
-        background: linear-gradient(
-            rgba(var(--accent-dark), 66%),
-            rgba(var(--accent-dark), 33%)
-        );
-        padding: 1.5rem;
-        border-radius: 8px;
-    }
-
-    .instructions code {
-        font-size: 0.8em;
-        font-weight: bold;
-        background: rgba(var(--accent-light), 12%);
-        color: rgb(var(--accent-light));
-        border-radius: 4px;
-        padding: 0.3em 0.4em;
-    }
-
-    .instructions strong {
-        color: rgb(var(--accent-light));
-    }
-
-    .link-card-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-        gap: 2rem;
-        padding: 0;
-    }
-</style>
+        /* 其他样式... */
+    </style>
+</head>
+<body>
+    <Layout title="欢迎来到Astro">
+        <main>
+            <!-- 导航栏组件 -->
+            <NavigationBar />
+            
+            <h1>关于考研</h1>
+            <p>在这个页面，我将展示有关我的整理的考研资料</p>
+        </main>
+        <!-- 页脚组件 -->
+        <Footerdiv />
+    </Layout>
+</body>
+</html>

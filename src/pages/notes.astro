@@ -5,95 +5,126 @@ import NavigationBar from "../components/NavigationBar.astro";
 import Footerdiv from "../components/Footer.astro";
 ---
 
-<Layout title="欢迎来到Astro">
-    <main>
-        
-<NavigationBar />
-        <h1>课堂笔记</h1>
-        <h2>P211012582<span class="text-gradient">马丽</span></h2>
-        <h2>Astro的安装及部署</h2>
-        <p>在这个页面，我将展示有关我的网络编辑课的课堂笔记</p>
-        <ul>
-            <li><a href="/md/1/">Astro的安装及部署</a></li>
-            <li><a href="/md/2/">在Astro中创建页面及导航链接</a></li>
-        </ul>
-    </main>
-    <Footerdiv />
-</Layout>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎来到Astro</title>
+    <style>
+        /* 页面基础样式 */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #FFC0CB, white); /* 粉色到白色的渐变 */
+        }
 
-<style>
-    main {
-        margin: auto;
-        padding: 1rem;
-        width: 800px;
-        max-width: calc(100% - 2rem);
-        color: pink;
-        font-size: 20px;
-        line-height: 1.6;
-    }
+        /* 主要内容区域样式 */
+        main {
+            margin: auto;
+            padding: 1rem;
+            width: 800px;
+            max-width: calc(100% - 2rem);
+            color: pink;
+            font-size: 20px;
+            line-height: 1.6;
+        }
 
-    nav a {
-        color: purple;
-    }
+        /* 导航链接样式 */
+        nav a {
+            color: purple;
+        }
 
-    .astro-a {
-        position: absolute;
-        top: -32px;
-        left: 50%;
-        transform: translatex(-50%);
-        width: 220px;
-        height: auto;
-        z-index: -1;
-    }
+        /* 标题样式 */
+        h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 1em;
+        }
 
-    h1 {
-        font-size: 4rem;
-        font-weight: 700;
-        line-height: 1;
-        text-align: center;
-        margin-bottom: 1em;
-    }
+        h2 {
+            text-align: center;
+        }
 
-    h2 {
-        text-align: center;
-    }
+        /* 文本渐变样式 */
+        .text-gradient {
+            background-image: linear-gradient(to right, #FFC0CB, white);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 400%;
+            background-position: 0%;
+        }
 
-    .text-gradient {
-        background-image: var(--accent-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 400%;
-        background-position: 0%;
-    }
+        /* 指令样式 */
+        .instructions {
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 192, 206, 0.25);
+            background: linear-gradient(
+                rgba(255, 135, 135, 0.66),
+                rgba(255, 135, 135, 0.33)
+            );
+            padding: 1.5rem;
+            border-radius: 8px;
+            color: #FFC0CB; /* 确保文字颜色与背景协调 */
+        }
 
-    .instructions {
-        margin-bottom: 2rem;
-        border: 1px solid rgba(var(--accent-light), 25%);
-        background: linear-gradient(
-            rgba(var(--accent-dark), 66%),
-            rgba(var(--accent-dark), 33%)
-        );
-        padding: 1.5rem;
-        border-radius: 8px;
-    }
+        .instructions code {
+            font-size: 0.8em;
+            font-weight: bold;
+            background: rgba(255, 192, 206, 0.12);
+            color: #FFC0CB;
+            border-radius: 4px;
+            padding: 0.3em 0.4em;
+        }
 
-    .instructions code {
-        font-size: 0.8em;
-        font-weight: bold;
-        background: rgba(var(--accent-light), 12%);
-        color: rgb(var(--accent-light));
-        border-radius: 4px;
-        padding: 0.3em 0.4em;
-    }
+        .instructions strong {
+            color: #FFC0CB;
+        }
 
-    .instructions strong {
-        color: rgb(var(--accent-light));
-    }
+        /* 链接卡片网格样式 */
+        .link-card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+            gap: 2rem;
+            padding: 0;
+        }
 
-    .link-card-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-        gap: 2rem;
-        padding: 0;
-    }
-</style>
+        /* 页脚样式 */
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            color: #333;
+        }
+
+        /* 响应式设计样式 */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 3rem;
+            }
+
+            /* 可能需要的其他响应式调整 */
+        }
+    </style>
+</head>
+<body>
+    <Layout title="欢迎来到Astro">
+        <main>
+            <!-- 导航栏组件 -->
+            <NavigationBar />
+            
+            <h1>考研笔记</h1>
+            <h2>P211012582<span class="text-gradient">马丽</span></h2>
+            <h2>考研笔记</h2>
+            <p>在这个页面，我将展示有关我的25考研笔记整理笔记</p>
+            <ul class="link-card-grid">
+                <li><a href="/md/3/">25马理论考研资料整理</a></li>
+            </ul>
+        </main>
+        <!-- 页脚组件 -->
+        <Footerdiv />
+    </Layout>
+</body>
+</html>
